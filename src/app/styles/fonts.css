@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "NeueMontreal-Light";
+  src: local("NeueMontreal-Light"),
+    url("../../assets/fonts/NeueMontreal-Light.ttf") format("truetype");
+}
+
+.neue-lig {
+  font-family: "NeueMontreal-Light";
+}
+
+@font-face {
+  font-family: "NeueMontreal-Medium";
+  src: local("NeueMontreal-Medium"),
+    url("../../assets/fonts/NeueMontreal-Medium.ttf") format("truetype");
+}
+
+.neue-med {
+  font-family: "NeueMontreal-Medium";
+}
+
+@font-face {
+  font-family: "NeueMontreal-Regular";
+  src: local("NeueMontreal-Regular"),
+    url("../../assets/fonts/NeueMontreal-Regular.ttf") format("truetype");
+}
+
+.neue-reg {
+  font-family: "NeueMontreal-Regular";
+}
+
+@font-face {
+  font-family: "NeueMontreal-Bold";
+  src: local("NeueMontreal-Bold"),
+    url("../../assets/fonts/NeueMontreal-Bold.ttf") format("truetype");
+}
+
+.neue-bold {
+  font-family: "NeueMontreal-Bold";
+}

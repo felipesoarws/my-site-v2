@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "periodEN": "Jun 2023 - Present",
+    "periodBR": "Jun 2023 - Atualmente",
+    "companyLogo": "/companies/swordfish_brasil.jpg",
+    "companyNameEN": "SwordFish Brazil",
+    "companyNameBR": "SwordFish Brasil",
+    "positionEN": "Media and Data Analyst",
+    "positionBR": "Analista de Mídia e Dados",
+    "functionsBR": [
+      "Planejamento estratégico e tático de campanhas em Meta, Google, TikTok e LinkedIn.",
+      "Análise de resultados, desenvolvimento de reports e apresentação para clientes",
+      "Otimização de projetos com foco em KPIs."
+    ],
+    "functionsEN": [
+      "Strategic and tactical campaign planning on Meta, Google, TikTok and LinkedIn.",
+      "Results analysis, report development and presentation to clients.",
+      "Project optimization with a focus on KPIs."
+    ]
+  },
+  {
+    "id": 2,
+    "periodEN": "Apr 2022 - Jun 2023",
+    "periodBR": "Abr 2022 - Jun 2023",
+    "companyLogo": "/companies/digital_solvers.png",
+    "companyNameEN": "Digital Solvers",
+    "companyNameBR": "Digital Solvers",
+    "positionEN": "Marketing Digital Assistant",
+    "positionBR": "Assistente de Marketing Digital",
+    "functionsBR": [
+      "Criação de campanhas na plataforma de Google Ads.",
+      "Análise de resultados e desenvolvimento de reports para clientes",
+      "Otimização de campanhas com foco em KPIs."
+    ],
+    "functionsEN": [
+      "Creation of campaignas on the Google Ads platform.",
+      "Results analysis, report development and presentation to clients.",
+      "Project optimization with a focus on KPIs."
+    ]
+  }
+]

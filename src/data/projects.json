@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "builtYear": 2022,
+    "projectName": "Valorant Hub",
+    "projectSlug": "valorant-hub",
+    "builtWith": ["React", "SCSS", "API"],
+    "projectDescBR": "Um website de Valorant, com agentes, características, ranks e mapas.",
+    "projectDescEN": "A Valorant website, with agents, characteristics, ranks and maps.",
+    "mobileBackground": "/projects/vlrhub/vlrgg_mobile.png",
+    "desktopBackground": "/projects/vlrhub/vlrgg_desktop.png",
+    "repository": "https://github.com/felipesoarws/valorant-hub",
+    "projectLink": "https://vlrgg.vercel.app",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/vlrhub/header.png",
+        "descriptionBR": "Este projeto marcou meu início da jornada com APIs e React. Desenvolver o site exigiu integração com dados externos sobre agentes, mapas e ranks do jogo Valorant. Aprendi a estruturar chamadas de API, manipular estados e aplicar SCSS para estilização modular.",
+        "descriptionEN": "This project marked the beginning of my journey with APIs and React. Building the site required integrating external data on agents, maps, and ranks from Valorant. I learned how to structure API calls, manage state, and apply SCSS for modular styling."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "builtYear": 2023,
+    "projectName": "Google Keep",
+    "projectSlug": "google-keep",
+    "builtWith": ["React", "SCSS"],
+    "projectDescBR": "Clone para criar tarefas, alterar layout e marcar tarefas feitas.",
+    "projectDescEN": "A clone to create tasks, change the view and mark tasks already completed.",
+    "mobileBackground": "/projects/googlekeep/googlekeep_mobile.png",
+    "desktopBackground": "/projects/googlekeep/googlekeep_desktop.png",
+    "repository": "https://github.com/felipesoarws/google-keep-clone",
+    "projectLink": "https://google-keep-clone-dev.vercel.app",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/googlekeep/header.png",
+        "descriptionBR": "A proposta foi recriar funcionalidades do Google Keep, como criação, visualização e marcação de tarefas. Aprofundei meus conhecimentos em React com foco em gerenciamento de estados locais e práticas de componentização. O SCSS foi usado para estilização personalizada.",
+        "descriptionEN": "The goal was to replicate Google Keep features like creating, viewing, and marking tasks. I deepened my React knowledge focusing on local state management and component practices. SCSS was used for custom styling."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "builtYear": 2023,
+    "projectName": "German Audio",
+    "projectSlug": "german-audio",
+    "builtWith": ["goDaddy", "HTML", "CSS"],
+    "projectDescBR": "Criação e custumização da página, utilizando goDaddy e também scripts de HTML e CSS.",
+    "projectDescEN": "Creation and customization, using goDaddy and also HTML and CSS scripts.",
+    "mobileBackground": "/projects/german/germanaudio_mobile.png",
+    "desktopBackground": "/projects/german/germanaudio_desktop.png",
+    "repository": "",
+    "projectLink": "https://germanaudio.com.br/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/german/header.png",
+        "descriptionBR": "Desenvolvi e personalizei um site institucional usando as ferramentas do GoDaddy, com código HTML e CSS direto. Foi um aprendizado voltado à adaptação em plataformas de criação e foco em layout simples, mas funcional.",
+        "descriptionEN": "I developed and customized a business website using GoDaddy’s tools with direct HTML and CSS coding. It was a learning experience focused on adapting to platform constraints and delivering a clean, functional layout."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "builtYear": 2024,
+    "projectName": "Simulador do Brasileirão",
+    "projectSlug": "simulador-do-brasileirao",
+    "builtWith": ["React", "SCSS"],
+    "projectDescBR": "Simulador de resultados do campeonato brasileiro baseado no Globo Esporte.",
+    "projectDescEN": "Brazilian championship results simulator based on Globo Esporte.",
+    "mobileBackground": "/projects/brasileirao/simulador_brasileirao_mobile.png",
+    "desktopBackground": "/projects/brasileirao/simulador_brasileirao_desktop.png",
+    "repository": "https://github.com/felipesoarws/brasileirao-simulador-2024",
+    "projectLink": "https://brasileirao-simulador.vercel.app/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/brasileirao/header.png",
+        "descriptionBR": "Inspirado no Globo Esporte, este simulador foi uma oportunidade para aplicar lógica em React com base em dados de partidas. O foco foi na manipulação de estados complexos e renderização condicional com uma interface limpa em SCSS.",
+        "descriptionEN": "Inspired by Globo Esporte, this simulator provided a chance to apply game logic in React based on match data. The focus was on managing complex states and using conditional rendering with a clean SCSS-based interface."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "builtYear": 2024,
+    "projectName": "Dunder Mifflin",
+    "projectSlug": "dunder-mifflin",
+    "builtWith": ["React", "Tailwind", "Figma"],
+    "projectDescBR": "Landing Page da empresa Dunder Mifflin, inspirado da série The Office.",
+    "projectDescEN": "Dunder Mifflin Landing Page, inspired by the series The Office.",
+    "mobileBackground": "/projects/dundermifflin/dundermifflin_mobile.png",
+    "desktopBackground": "/projects/dundermifflin/dundermifflin_desktop.png",
+    "repository": "https://github.com/felipesoarws/dunder-mifflin-company",
+    "projectLink": "https://thedundermifflin.vercel.app/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/dundermifflin/header.png",
+        "descriptionBR": "Este projeto foi uma landing page fictícia da empresa da série The Office. Trabalhei com Figma para o design e utilizei Tailwind para transformar o layout em um site moderno e responsivo. Foi um grande aprendizado em design system e estilização utilitária de uma série que eu amo!",
+        "descriptionEN": "This project was a fictional landing page for the company featured in the series The Office. I worked with Figma for the design and used Tailwind to transform the layout into a modern and responsive website. It was a great learning experience in design systems and utilitarian styling for a series that I love!"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "builtYear": 2024,
+    "projectName": "@felipesoarws (v1)",
+    "projectSlug": "felipesoarws-v1",
+    "builtWith": ["React", "SCSS", "Figma"],
+    "projectDescBR": "Meu antigo portifólio criado para inserir meus projetos, skills e seção de contato.",
+    "projectDescEN": "My old portfolio created to insert my projects, skills and contact section.",
+    "mobileBackground": "/projects/fsoarwsold/portifolio_felp_mobile.png",
+    "desktopBackground": "/projects/fsoarwsold/portifolio_felp_desktop.png",
+    "repository": "https://github.com/felipesoarws/my-site",
+    "projectLink": "https://felipesoarws-old.vercel.app/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/fsoarwsold/header.png",
+        "descriptionBR": "Meu primeiro portfólio pessoal com React e SCSS. O projeto me ensinou a estruturar um site completo com navegação, responsividade e foco em apresentação pessoal. Usei Figma como base de design.",
+        "descriptionEN": "My first personal portfolio built with React and SCSS. This project taught me how to structure a complete site with navigation, responsiveness, and a focus on personal presentation. Figma was used as the design reference."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "builtYear": 2024,
+    "projectName": "Gabrielle Silva",
+    "projectSlug": "gabrielle-silva",
+    "builtWith": ["React", "Tailwind", "Figma"],
+    "projectDescBR": "Portifólio criado para Gabrielle Silva, diretora de arte e fotógrafa.",
+    "projectDescEN": "Portfolio created for Gabrielle Silva, art director and photographer.",
+    "mobileBackground": "/projects/gabriellesilva/portifolio_gabrielle_mobile.png",
+    "desktopBackground": "/projects/gabriellesilva/portifolio_gabrielle_desktop.png",
+    "repository": "",
+    "projectLink": "https://gabriellesilva.vercel.app/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/gabriellesilva/header.png",
+        "carouselImages": [
+          "/projects/gabriellesilva/1.png",
+          "/projects/gabriellesilva/2.png",
+          "/projects/gabriellesilva/3.png"
+        ],
+        "descriptionBR": "Desenvolvi este portfólio para uma diretora de arte e fotógrafa, focando na exibição visual do conteúdo. Utilizei React, Tailwind e Figma para criar uma experiência moderna, elegante e personalizada.",
+        "descriptionEN": "I developed this portfolio for an art director and photographer, focusing on visually presenting her work. React, Tailwind, and Figma were used to create a modern, elegant, and personalized experience.",
+        "extrasLinks": [
+          "https://www.instagram.com/gabriellesilvaphoto_/",
+          "https://www.behance.net/gabriellesilva_"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "builtYear": 2025,
+    "projectName": "Starky",
+    "projectSlug": "starky",
+    "builtWith": ["React", "Tailwind", "Figma"],
+    "projectDescBR": "Aplicativo para estudos baseado em flashcards, com método de repetição espaçada.",
+    "projectDescEN": "Study application based in flashcards, with spaced repetition method.",
+    "mobileBackground": "/projects/starky/starky_desktop.png",
+    "desktopBackground": "/projects/starky/starky_desktop.png",
+    "repository": "https://github.com/felipesoarws/Starky",
+    "projectLink": "https://starky.vercel.app/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/starky/header.png",
+        "carouselImages": [
+          "/projects/starky/1.png",
+          "/projects/starky/2.png",
+          "/projects/starky/3.png",
+          "/projects/starky/4.png",
+          "/projects/starky/5.png",
+          "/projects/starky/6.png",
+          "/projects/starky/7.png",
+          "/projects/starky/8.png",
+          "/projects/starky/9.png"
+        ],
+        "descriptionBR": "Esse é um aplicativo educacional com flashcards e repetição espaçada. Trabalhei a lógica da aplicação em React e usei Tailwind para criar uma UI intuitiva. O projeto aprofundou meu entendimento sobre interatividade, persistência de dados e experiência do usuário.",
+        "descriptionEN": "This is an educational app with flashcards and spaced repetition. I wrote the application logic in React and used Tailwind to create an intuitive UI. The project deepened my understanding of interactivity, data persistence, and user experience."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "builtYear": 2025,
+    "projectName": "Bliss Sync",
+    "projectSlug": "bliss-sync",
+    "builtWith": ["React", "Tailwind", "Figma"],
+    "projectDescBR": "Bliss Sync é uma empresa que atua com conteúdo e comunicação para marcas do universo da moda.",
+    "projectDescEN": "Bliss Sync is a company that works with content & communication for brands in the fashion world.",
+    "mobileBackground": "/projects/blisssync/blisssync_desktop.png",
+    "desktopBackground": "/projects/blisssync/blisssync_desktop.png",
+    "repository": "",
+    "projectLink": "https://blisssync.vercel.app/",
+    "projectDetails": [
+      {
+        "headerBackground": "/projects/blisssync/header.png",
+        "carouselImages": [
+          "/projects/blisssync/1.png",
+          "/projects/blisssync/2.png",
+          "/projects/blisssync/3.png",
+          "/projects/blisssync/4.png",
+          "/projects/blisssync/5.png",
+          "/projects/blisssync/6.png"
+        ],
+        "descriptionBR": "Esse foi um projeto real para uma empresa do setor de moda. Desenvolvido com TypeScript, Tailwind e Figma, foi um avanço na aplicação de tipagem estática e design responsivo. Trabalhei em múltiplas seções animadas e responsivas, focando em estética e clareza na comunicação.",
+        "descriptionEN": "This was a real-world project for a fashion company. Developed with TypeScript, Tailwind and Figma, it was a breakthrough in the application of static typing and responsive design. I worked on multiple animated and responsive sections, focusing on aesthetics and clarity of communication.",
+        "extrasLinks": ["https://www.instagram.com/bliss.sync/"]
+      }
+    ]
+  }
+]

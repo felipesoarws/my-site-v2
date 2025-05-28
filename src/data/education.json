@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "periodEN": "Ago 2024 - Present",
+    "periodBR": "Ago 2024 - Atualmente",
+    "companyLogo": "/colleges/cruzeirodosulvirtual.jpg",
+    "companyNameEN": "Software Engineer",
+    "companyNameBR": "Engenharia de Software",
+    "positionEN": "Cruzeiro do Sul Virtual",
+    "positionBR": "Cruzeiro do Sul Virtual",
+    "functionsBR": [
+      "Com expectativa de formação em 06/2028.",
+      "Aprendendo metodologias ágeis, práticas de codificação e principios de codificação web."
+    ],
+    "functionsEN": [
+      "Expected to graduate in 06/2028.",
+      "Learning agile methodologies, coding practices and web coding principles."
+    ]
+  },
+  {
+    "id": 2,
+    "periodEN": "Apr 2022 - Jan 2024",
+    "periodBR": "Abr 2022 - Jan 2024",
+    "companyLogo": "/colleges/unip.jpg",
+    "companyNameEN": "Systems Analysis and Development",
+    "companyNameBR": "Análise e Desenvolvimento de Sistemas",
+    "positionEN": "Universidade Paulista",
+    "positionBR": "Universidade Paulista",
+    "functionsBR": [
+      "Formado em 2024.",
+      "Conhecimento em desenvolvimento de software, diagramas e conceitos de HTML."
+    ],
+    "functionsEN": [
+      "Gratuated in 2024.",
+      "Knowledge in software development, diagrams and HTML concepts."
+    ]
+  }
+]

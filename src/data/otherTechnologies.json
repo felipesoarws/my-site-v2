@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "meta",
+    "name": "Meta ADS"
+  },
+  {
+    "icon": "tiktok",
+    "name": "TikTok ADS"
+  },
+  {
+    "icon": "google",
+    "name": "Google ADS"
+  },
+  {
+    "icon": "analytics",
+    "name": "Analytics"
+  },
+  {
+    "icon": "gtm",
+    "name": "Tag Manager"
+  }
+]
