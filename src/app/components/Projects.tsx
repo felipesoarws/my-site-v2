@@ -108,7 +108,7 @@ const Projects = ({ lang }: ProjectsProps) => {
             <CarouselPrevious className="cursor-pointer lg:scale-80 lg:translate-x-[.4vw]" />
           )}
 
-          <CarouselContent>
+          <CarouselContent className="min-[375px]:h-[55vh] min-[390px]:h-[41vh] md:h-fit">
             <AnimatePresence mode="wait">
               {filteredProjects.map((project, id) => (
                 <CarouselItem key={id} className=" md:basis-1/2">
@@ -202,7 +202,7 @@ const ProjectItem = ({
           ))}
         </div>
       </div>
-      <span className="absolute bottom-[-.5rem] right-0 font-bold text-[#a5a4a710] text-[2rem] py-[.1rem] px-[.4rem] lg:py-[.1vw] lg:px-[.4vw] lg:text-[2.5vw] lg:bottom-[-.8vw]">
+      <span className="absolute bottom-[-.5rem] right-0 font-bold text-[#a5a4a710] text-[2rem] py-[.1rem] px-[.4rem] lg:py-[.1vw] lg:px-[.4vw] lg:text-[2vw] lg:bottom-[-.5vw]">
         {year}
       </span>
     </div>

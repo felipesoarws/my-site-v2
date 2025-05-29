@@ -17,7 +17,6 @@ import { BiLogoTypescript } from "react-icons/bi";
 import technologiesData from "../../data/technologies.json";
 import otherTechnologiesData from "../../data/otherTechnologies.json";
 
-// ícones válidos para uso
 const icons = {
   html: FaHtml5,
   css: FaCss3Alt,
@@ -34,7 +33,6 @@ const icons = {
   gtm: SiGoogletagmanager,
 };
 
-// tipo baseado nas chaves do objeto icons
 type IconName = keyof typeof icons;
 
 type Technology = {
@@ -52,7 +50,6 @@ const Technologies = ({ lang }: TechnologiesProps) => {
 
   return (
     <>
-      {/* Tecnologias principais */}
       <div className="lg:my-[2vw]">
         <h1 className="font-bold text-[#f5f4f4] text-[1.2rem] lg:text-[1.3vw]">
           {lang === "BR" ? "tecnologias" : "technologies"}
@@ -76,7 +73,6 @@ const Technologies = ({ lang }: TechnologiesProps) => {
         </div>
       </div>
 
-      {/* Outras tecnologias */}
       <div className="lg:my-[2vw]">
         <h1 className="font-bold text-[#f5f4f4] text-[1.2rem] lg:text-[1.3vw]">
           {lang === "BR" ? "outras..." : "others..."}
