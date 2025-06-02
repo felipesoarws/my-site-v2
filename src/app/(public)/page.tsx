@@ -25,7 +25,7 @@ export default function Home() {
     } else {
       setLanguage("BR");
     }
-  }, []);
+  }, [setLanguage]);
 
   return (
     <>
