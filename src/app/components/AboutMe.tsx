@@ -1,7 +1,12 @@
+import { useState } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
+
 import Image from "next/image";
 
 // images
 import Me from "../../assets/images/profile.jpg";
+import SPFC from "../../../public/spfc.svg";
 
 // icons
 import { Github, Mail, Linkedin, FileDown, Instagram } from "lucide-react";
@@ -12,6 +17,8 @@ type AboutMeProps = {
 };
 
 const AboutMe = ({ lang }: AboutMeProps) => {
+  const [isTeamShowingUp, setIsTeamShowingUp] = useState<boolean>(false);
+
   return (
     <>
       <div className="flex items-start gap-5 lg:gap-[2vw]">
@@ -31,27 +38,69 @@ const AboutMe = ({ lang }: AboutMeProps) => {
             </h1>
           )}
 
-          {lang === "BR" ? (
-            <p className="neue-reg text-[var(--light-gray)] text-[.9rem] lg:text-[1.1vw]">
-              um desenvolvedor frontend de 23 anos apaixonado por futebol,
-              música e tecnologia.
-            </p>
+          {isTeamShowingUp ? (
+            <motion.div
+              initial={{ opacity: 0, x: 15 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 15 }}
+              transition={{ duration: 0.5 }}
+              className="z-100 absolute hidden lg:block lg:translate-x-[-1.6vw] lg:translate-y-[1.8vw]"
+            >
+              <Image
+                src={SPFC}
+                alt="São Paulo Futebol Clube logo"
+                className="lg:w-[1.2vw] transition-all duration-[.3s] ease-in-out"
+              />
+            </motion.div>
           ) : (
-            <p className="neue-reg text-[var(--light-gray)] text-[.9rem] lg:text-[1.1vw]">
-              a 23-year-old frontend developer passioned for football, music and
-              technology.
-            </p>
+            <></>
           )}
 
-          {lang === "BR" ? (
-            <p className="neue-reg text-[var(--light-white)] text-[.8rem] lg:text-[1vw] lg:mt-[.4vw]">
-              São Paulo - Brasil
-            </p>
-          ) : (
-            <p className="neue-reg text-[var(--light-white)] text-[.8rem] lg:text-[1vw] lg:mt-[.4vw]">
-              São Paulo - Brazil
-            </p>
-          )}
+          <div>
+            {lang === "BR" ? (
+              <p className="neue-reg text-[var(--light-gray)] text-[.9rem] lg:text-[1.1vw]">
+                um desenvolvedor frontend de 23 anos apaixonado por{" "}
+                <span
+                  onMouseEnter={() => setIsTeamShowingUp(true)}
+                  onMouseLeave={() => setIsTeamShowingUp(false)}
+                  className={`${
+                    isTeamShowingUp
+                      ? "bg-[red] text-[var(--light-white)]"
+                      : "bg-[transparent]"
+                  } transition-all duration-[.3s] ease-in-out`}
+                >
+                  futebol
+                </span>
+                , música e tecnologia.
+              </p>
+            ) : (
+              <p className="neue-reg text-[var(--light-gray)] text-[.9rem] lg:text-[1.1vw] lg:mr-[3vw]">
+                a 23-year-old frontend developer passioned for{" "}
+                <span
+                  onMouseEnter={() => setIsTeamShowingUp(true)}
+                  onMouseLeave={() => setIsTeamShowingUp(false)}
+                  className={`${
+                    isTeamShowingUp
+                      ? "bg-[red] text-[var(--light-white)]"
+                      : "bg-[transparent]"
+                  } transition-all duration-[.3s] ease-in-out`}
+                >
+                  football
+                </span>
+                , music and technology.
+              </p>
+            )}
+
+            {lang === "BR" ? (
+              <p className="neue-reg text-[var(--light-white)] text-[.8rem] lg:text-[1vw] lg:mt-[.4vw]">
+                São Paulo - Brasil
+              </p>
+            ) : (
+              <p className="neue-reg text-[var(--light-white)] text-[.8rem] lg:text-[1vw] lg:mt-[.4vw]">
+                São Paulo - Brazil
+              </p>
+            )}
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-between gap-8 my-6 lg:gap-[2vw] lg:my-[1.2vw] lg:ml-[.5vw] lg:justify-start">
