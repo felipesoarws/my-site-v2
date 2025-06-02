@@ -19,6 +19,7 @@ import Footer from "@/app/components/Header";
 
 //data
 import projects from "@/data/projects.json";
+import { useLanguage } from "@/context/LanguageProvider";
 
 interface ProjectDetails {
   headerBackground: string;
@@ -43,7 +44,8 @@ interface DetailedProject {
 }
 
 export default function Projects() {
-  const [language, setLanguage] = useState<string>("");
+  const { language } = useLanguage();
+
   const [project, setProject] = useState<DetailedProject | undefined>(
     undefined
   );
@@ -51,13 +53,6 @@ export default function Projects() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    const savedLang = localStorage.getItem("language");
-    if (savedLang) {
-      setLanguage(savedLang);
-    } else {
-      setLanguage("BR");
-    }
 
     const detailedProject = projects.find((p) => p.projectSlug === id);
     setProject(detailedProject);
@@ -67,8 +62,8 @@ export default function Projects() {
     return (
       <div className="flex items-center justify-center">
         <div className="bg-[var(--dark-gray)] h-screen relative overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.1)] p-8 w-[100%] lg:rounded-[.8vw] lg:w-[45vw] lg:py-[1.5vw]">
-          <Header path={"projects"} setLang={setLanguage} />
-          <main className="my-8 lg:my-[3.7vw]">
+          <Header path={"projects"} />
+          <main className="my-8 lg:my-[1.5vw]">
             <div>
               <div className="flex items-center justify-center min-h-[300px]">
                 <div className="w-10 h-10 border-4 border-t-transparent border-[var(--light-gray)] rounded-full animate-spin" />
@@ -82,8 +77,8 @@ export default function Projects() {
   return (
     <div className="flex items-center justify-center">
       <div className="bg-[var(--dark-gray)] relative overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.1)] p-8 w-[100%] lg:rounded-[.8vw] lg:w-[45vw] lg:py-[1.5vw]">
-        <Header path={"projects"} setLang={setLanguage} />
-        <main className="my-8 lg:my-[3.7vw]">
+        <Header path={"projects"} />
+        <main className="my-8 lg:my-[1.5vw]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -306,7 +301,7 @@ export default function Projects() {
             <></>
           )}
         </main>
-        <Footer path="" setLang={() => ""} />
+        <Footer />
       </div>
     </div>
   );

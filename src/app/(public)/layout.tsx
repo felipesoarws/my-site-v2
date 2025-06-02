@@ -4,6 +4,8 @@ import "../styles/globals.css";
 
 import Squares from "@/app/components/Background";
 
+import { LanguageProvider } from "@/context/LanguageProvider";
+
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -25,16 +27,18 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${inter.className} antialiased`}>
-        <div className="fixed bottom-0 top-0 right-0 left-0">
-          <Squares
-            speed={0.3}
-            squareSize={40}
-            direction="diagonal" // up, down, left, right, diagonal
-            borderColor="#424144"
-            hoverFillColor="#222"
-          />
-        </div>
-        {children}
+        <LanguageProvider>
+          <div className="fixed bottom-0 top-0 right-0 left-0">
+            <Squares
+              speed={0.3}
+              squareSize={40}
+              direction="diagonal" // up, down, left, right, diagonal
+              borderColor="#424144"
+              hoverFillColor="#222"
+            />
+          </div>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ProjectHoverEffect from "@/app/components/ProjectHoverEffect";
 
 import { CircleFadingPlus } from "lucide-react";
 
@@ -209,34 +212,43 @@ const Projects = ({ lang }: ProjectsProps) => {
             <AnimatePresence mode="wait">
               {filteredProjects.map((project, id) => (
                 <CarouselItem key={id} className=" md:basis-1/2">
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0.2, delay: id * 0.05 }}
+                  <ProjectHoverEffect
+                    glareColor="#ffffff"
+                    glareOpacity={0.3}
+                    glareAngle={-30}
+                    glareSize={300}
+                    transitionDuration={1200}
+                    playOnce={true}
                   >
-                    {lang === "BR" ? (
-                      <Link href={`/projetos/${project.projectSlug}`}>
-                        <ProjectItem
-                          cover={project.desktopBackground}
-                          title={project.projectName}
-                          desc={project.projectDescBR}
-                          stacks={project.builtWith}
-                          year={project.builtYear}
-                        />
-                      </Link>
-                    ) : (
-                      <Link href={`/projetos/${project.projectSlug}`}>
-                        <ProjectItem
-                          cover={project.desktopBackground}
-                          title={project.projectName}
-                          desc={project.projectDescEN}
-                          stacks={project.builtWith}
-                          year={project.builtYear}
-                        />
-                      </Link>
-                    )}
-                  </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -30 }}
+                      transition={{ duration: 0.2, delay: id * 0.05 }}
+                    >
+                      {lang === "BR" ? (
+                        <Link href={`/projetos/${project.projectSlug}`}>
+                          <ProjectItem
+                            cover={project.desktopBackground}
+                            title={project.projectName}
+                            desc={project.projectDescBR}
+                            stacks={project.builtWith}
+                            year={project.builtYear}
+                          />
+                        </Link>
+                      ) : (
+                        <Link href={`/projetos/${project.projectSlug}`}>
+                          <ProjectItem
+                            cover={project.desktopBackground}
+                            title={project.projectName}
+                            desc={project.projectDescEN}
+                            stacks={project.builtWith}
+                            year={project.builtYear}
+                          />
+                        </Link>
+                      )}
+                    </motion.div>
+                  </ProjectHoverEffect>
                 </CarouselItem>
               ))}
             </AnimatePresence>
