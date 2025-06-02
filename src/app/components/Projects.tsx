@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+import { CircleFadingPlus } from "lucide-react";
 
 //data
 import projects from "../../data/projects.json";
@@ -32,8 +34,12 @@ type ProjectsProps = {
 };
 
 const Projects = ({ lang }: ProjectsProps) => {
-  const [, setFilteredProjectsInput] = useState<string>("");
+  const [filteredProjectsInput, setFilteredProjectsInput] =
+    useState<string>("");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+
+  const [selectedYears, setSelectedYears] = useState<number[]>([]);
+  const [isFilterByYearOpen, setIsFilterByYearOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const sortedProjects = projects.sort((a, b) => b.builtYear - a.builtYear);
@@ -56,6 +62,47 @@ const Projects = ({ lang }: ProjectsProps) => {
     setFilteredProjects(filtered);
   };
 
+  const projectsPerYears = [
+    ...new Set(projects.map((project) => project.builtYear)),
+  ];
+
+  const checkProjectsYear = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    year: number
+  ) => {
+    setFilteredProjectsInput("");
+
+    const checked = e.target.checked;
+
+    setSelectedYears((prevSelectedYears) => {
+      if (checked) {
+        const updated = [...prevSelectedYears, year];
+
+        filterProjects(updated);
+        return updated;
+      } else {
+        const updated = prevSelectedYears.filter((y) => y !== year);
+
+        filterProjects(updated);
+        return updated;
+      }
+    });
+  };
+
+  const filterProjects = (years: number[]) => {
+    if (years.length === 0) {
+      const sorted = projects.sort((a, b) => b.builtYear - a.builtYear);
+
+      setFilteredProjects(sorted);
+      return;
+    }
+
+    const filtered = projects.filter((project) =>
+      years.includes(project.builtYear)
+    );
+    setFilteredProjects(filtered);
+  };
+
   return (
     <div
       className="my-4 lg:my-[2vw]"
@@ -74,17 +121,67 @@ const Projects = ({ lang }: ProjectsProps) => {
             </h1>
           )}
         </div>
-        <div className="flex items-center gap-2 mt-1 lg:gap-[1vw] lg:mt-[.8vw]">
+        <div className="relative flex items-center gap-2 mt-1 lg:gap-[.5vw] lg:mt-[.8vw]">
           <input
             onChange={(e) => handleProjectsInput(e.target.value)}
+            value={filteredProjectsInput}
             type="text"
             placeholder={lang === "BR" ? "Filtrar projetos" : "Filter projects"}
             className="w-full border border-[#1d1d1d] text-[var(--light-white)] bg-transparent rounded-md p-3 text-[.9rem] lg:text-[.95vw] lg:rounded-[.6vw] lg:py-[.4vw] lg:px-[.8vw]"
           />
 
-          {/*  <button className="border border-[#1d1d1d] text-[var(--light-white)] bg-transparent rounded-md p-3 text-[.9rem] lg:text-[.95vw] lg:rounded-[.6vw] lg:py-[.4vw] lg:px-[.8vw]">
-            oi
-          </button> */}
+          <button
+            className="flex items-center justify-center gap-2 cursor-pointer border border-[#1d1d1d] text-[var(--light-white)] transition-all duration-[.3s] ease-in-out bg-transparent rounded-md p-3 text-[.9rem] lg:text-[.95vw] lg:rounded-[.6vw] lg:py-[.4vw] lg:px-[.8vw] lg:gap-[.6vw] hover:bg-[#1d1d1d]"
+            onClick={() => setIsFilterByYearOpen(!isFilterByYearOpen)}
+          >
+            <CircleFadingPlus size={18} color="var(--light-white)" />
+            {lang === "BR" ? <>Ano</> : <>Year</>}
+          </button>
+
+          {isFilterByYearOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.5 }}
+              className="bg-[var(--dark-gray)] flex flex-col gap-2 absolute rounded-[.6rem]  p-[.8rem]  right-0 bottom-[120%] border border-[#1d1d1d] text-[var(--light-white)] lg:rounded-[.6vw]  lg:p-[.8vw] lg:gap-[.5vw]"
+            >
+              {projectsPerYears.map((year, id) => (
+                <div
+                  key={id}
+                  className="flex items-center justify-start gap-2 lg:gap-[.5vw]"
+                >
+                  <div className="inline-flex items-center">
+                    <label className="flex items-center cursor-pointer relative">
+                      <input
+                        type="checkbox"
+                        className="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-[var(--light-gray)] checked:bg-[var(--light-white)] checked:border-[var(--light-white)]"
+                        checked={selectedYears.includes(year)}
+                        onChange={(e) => checkProjectsYear(e, year)}
+                      />
+                      <span className="absolute text-[var(--dark-gray)] opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-3.5 w-3.5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                  <span className="text-[.9rem] lg:text-[.9vw]">{year}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
         </div>
       </div>
       <div className="my-3 lg:my-[.9vw]">

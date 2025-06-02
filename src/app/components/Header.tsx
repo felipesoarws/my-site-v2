@@ -47,7 +47,7 @@ const Header = ({ path, setLang }: HeaderProps) => {
   };
 
   return (
-    <header className="z-10 fixed bg-[rgba(17,17,17,0.62)] flex flex-row justify-between backdrop-blur-[8.6px] border rounded-2xl border-solid border-[rgba(17,17,17,0.3)]  top-0 w-[100%] py-[.8rem] px-[2rem] translate-x-[-1.7rem] lg:w-[45vw] lg:translate-x-[-1.7vw] lg:py-[1.2vw] lg:px-[2vw] ">
+    <header className="z-10 fixed bg-[rgba(15,15,15,0.5)] flex flex-row justify-between backdrop-blur-[8.6px] border rounded-2xl border-solid border-[rgba(17,17,17,0.3)]  top-0 w-[100%] py-[.8rem] px-[2rem] translate-x-[-1.7rem] lg:w-[45vw] lg:translate-x-[-2vw] lg:py-[1.2vw] lg:px-[2vw] ">
       <nav>
         <ul>
           <li className={`${path == "home" ? "hidden" : "block"} `}>

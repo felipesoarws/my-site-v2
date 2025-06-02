@@ -1,11 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
   /* dark mode */
-  --dark-gray: #111111;
+  --dark-gray: #0f0f0f;
   --light-gray: #a5a4a7;
   --light-white: #f5f4f4;
   --radius: 0.625rem;
@@ -48,7 +46,6 @@
 
 body {
   background-color: var(--dark-gray);
-  background-image: url("../../assets/images/bg.png");
 }
 
 *::selection {

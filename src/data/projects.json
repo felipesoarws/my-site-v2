@@ -4,7 +4,7 @@
     "builtYear": 2022,
     "projectName": "Valorant Hub",
     "projectSlug": "valorant-hub",
-    "builtWith": ["React", "SCSS", "API"],
+    "builtWith": ["React", "SCSS"],
     "projectDescBR": "Um website de Valorant, com agentes, características, ranks e mapas.",
     "projectDescEN": "A Valorant website, with agents, characteristics, ranks and maps.",
     "mobileBackground": "/projects/vlrhub/vlrgg_mobile.png",
