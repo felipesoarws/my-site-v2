@@ -19,8 +19,28 @@
       "Project optimization with a focus on KPIs."
     ]
   },
-  {
+   {
     "id": 2,
+    "periodEN": "Jun 2023 - Set 2024",
+    "periodBR": "Jun 2023 - Set 2024",
+    "companyLogo": "/companies/swordfish_brasil.jpg",
+    "companyNameEN": "SwordFish Brazil",
+    "companyNameBR": "SwordFish Brasil",
+    "positionEN": "Media and Data Assistant",
+    "positionBR": "Assistente de Mídia e Dados",
+    "functionsBR": [
+      "Gerenciei e executei campanhas em plataformas como Meta Ads, TikTok Ads e Google Ads.",
+      "Utilizei Google Analytics e Google Tag Manager para um acompanhamento detalhado da performance.",
+      "Configurei eventos e conversões para otimizar continuamente o desempenho das campanhas."
+    ],
+    "functionsEN": [
+      "Managed and executed campaigns across platforms including Meta Ads, TikTok Ads, and Google Ads.",
+      "Utilized Google Analytics and Google Tag Manager for in-depth performance tracking.",
+      "Set up events and conversions to continuously optimize campaign performance."
+    ]
+  },
+  {
+    "id": 3,
     "periodEN": "Apr 2022 - Jun 2023",
     "periodBR": "Abr 2022 - Jun 2023",
     "companyLogo": "/companies/digital_solvers.png",
